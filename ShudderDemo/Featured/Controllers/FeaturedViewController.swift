@@ -16,7 +16,7 @@ fileprivate extension String {
 class FeaturedViewController: UIViewController {
     private let viewModel: FeaturedViewModel
 
-    private var categories: [String] = [] {
+    private var sections: [Section] = [] {
         didSet { tableView.reloadData() }
     }
 
@@ -33,7 +33,7 @@ class FeaturedViewController: UIViewController {
         let view = UITableView(frame: .zero, style: .plain)
         view.separatorStyle = .none
         view.dataSource = self
-        view.register(UITableViewCell.self, forCellReuseIdentifier: .categoryCellId)
+        view.register(CategoryRowCell.self, forCellReuseIdentifier: .categoryCellId)
         view.backgroundColor = UIColor.Theme.backgroundColor
         return view
     }()
@@ -55,22 +55,32 @@ class FeaturedViewController: UIViewController {
 
 extension FeaturedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: .categoryCellId, for: indexPath)
-        cell.textLabel?.text = "Hello, Shudder"
+        let cell = tableView.dequeueReusableCell(withIdentifier: .categoryCellId, for: indexPath) as! CategoryRowCell
+        cell.bind(items: sections[indexPath.section].items)
         return cell
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].category
     }
 }
 
 extension FeaturedViewController: FeaturedViewModelDelegate {
     func didUpdate(state: FeaturedViewModel.State) {
-        print(">>> STATE=\(state)")
+        switch state {
+        case .idle: break
+        case .loading: break
+        case .loaded(let sections):
+            self.sections = sections
+        case .error: break
+        }
     }
 }

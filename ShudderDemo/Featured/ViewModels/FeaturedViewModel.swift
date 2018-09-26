@@ -46,6 +46,7 @@ class FeaturedViewModel {
     }
 
     func fetch() {
+        self.state = .loading
         background { self.requestSectionsFromService() }
     }
 
