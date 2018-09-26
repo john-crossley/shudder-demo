@@ -10,31 +10,39 @@ import UIKit
 import SnapKit
 
 fileprivate extension String {
-    static let itemCellId: String = "itemCellId"
+    static let movieItemCellId: String = "movieItemCellId"
 }
 
 class CategoryRowCell: UITableViewCell {
-    private static let height: CGFloat = 200
 
     private var items: [Item] = [] {
-        didSet { collectionView.reloadData() }
+        didSet {
+            collectionView.reloadData()
+        }
     }
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 8
+        layout.minimumInteritemSpacing = 8
         layout.scrollDirection = .horizontal
-        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.dataSource = self
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
 
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.register(MovieItemCell.self, forCellWithReuseIdentifier: .movieItemCellId)
+        view.dataSource = self
+        view.delegate = self
+        view.backgroundColor = .clear
         return view
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        addSubview(collectionView)
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
+
+        contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(contentView)
         }
@@ -54,8 +62,19 @@ extension CategoryRowCell: UICollectionViewDataSource {
         return items.count
     }
 
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .itemCellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .movieItemCellId, for: indexPath) as! MovieItemCell
+        cell.bind()
         return cell
+    }
+}
+
+extension CategoryRowCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100 , height: 140)
     }
 }

@@ -13,6 +13,7 @@ class SectionHeaderView: UITableViewHeaderFooterView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        contentView.backgroundColor = UIColor.Theme.backgroundColor
     }
 
     func bind(model: HeaderViewModel) {

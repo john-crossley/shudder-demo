@@ -45,8 +45,9 @@ class FeaturedViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.Theme.backgroundColor
         view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(self.view)
+
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(view)
         }
 
         viewModel.delegate = self
@@ -70,12 +71,14 @@ extension FeaturedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
 }
 
 extension FeaturedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard section != 0 else { return nil }
-
         let category = sections[section].category
 
         let view = tableView
