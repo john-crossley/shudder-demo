@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1855CC18203B6D8E836A83 /* Pods_ShudderDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CD2188951F1043FAD8FED3 /* Pods_ShudderDemoTests.framework */; };
+		9701A744B326931769847177 /* Pods_ShudderDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553F7B9A2301E2FCF68331CD /* Pods_ShudderDemo.framework */; };
+		9A64C16E215ACBC20018F61B /* CategoryRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C16D215ACBC20018F61B /* CategoryRowCell.swift */; };
+		9A64C170215B62390018F61B /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C16F215B62390018F61B /* GlobalAppearance.swift */; };
+		9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C172215B63390018F61B /* UIColor+Extensions.swift */; };
+		9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C174215B69710018F61B /* UINavigationController+Extensions.swift */; };
 		9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */; };
 		9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C0F215ABFE70005837D /* AppDelegate.swift */; };
 		9AE64C12215ABFE70005837D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C11215ABFE70005837D /* ViewController.swift */; };
@@ -26,6 +32,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FEF59F0F58DBA54670E48A2 /* Pods-ShudderDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemoTests/Pods-ShudderDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		553F7B9A2301E2FCF68331CD /* Pods_ShudderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShudderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9661CC0322AE1779AFD170D0 /* Pods-ShudderDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemoTests/Pods-ShudderDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		999E4B99AC88C640032C38F3 /* Pods-ShudderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemo/Pods-ShudderDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9A64C16D215ACBC20018F61B /* CategoryRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowCell.swift; sourceTree = "<group>"; };
+		9A64C16F215B62390018F61B /* GlobalAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
+		9A64C172215B63390018F61B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		9A64C174215B69710018F61B /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
 		9AE64C0C215ABFE70005837D /* ShudderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShudderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE64C0F215ABFE70005837D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +50,8 @@
 		9AE64C20215ABFE80005837D /* ShudderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShudderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE64C24215ABFE80005837D /* ShudderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShudderDemoTests.swift; sourceTree = "<group>"; };
 		9AE64C26215ABFE80005837D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9CD2188951F1043FAD8FED3 /* Pods_ShudderDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShudderDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C23CEECA06AB34E7EA2225 /* Pods-ShudderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemo/Pods-ShudderDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9701A744B326931769847177 /* Pods_ShudderDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +67,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1855CC18203B6D8E836A83 /* Pods_ShudderDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A64C16B215ACB610018F61B /* Featured */ = {
+			isa = PBXGroup;
+			children = (
+				9A64C16C215ACB680018F61B /* Views */,
+			);
+			path = Featured;
+			sourceTree = "<group>";
+		};
+		9A64C16C215ACB680018F61B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A64C16D215ACBC20018F61B /* CategoryRowCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A64C171215B632E0018F61B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A64C172215B63390018F61B /* UIColor+Extensions.swift */,
+				9A64C174215B69710018F61B /* UINavigationController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9A6815E7215AC2C400C7BA6E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +121,8 @@
 				9AE64C0E215ABFE70005837D /* ShudderDemo */,
 				9AE64C23215ABFE80005837D /* ShudderDemoTests */,
 				9AE64C0D215ABFE70005837D /* Products */,
+				A83687674B19FF225CC23C2A /* Pods */,
+				F170D54530010C6315FFFBE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,12 +138,15 @@
 		9AE64C0E215ABFE70005837D /* ShudderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9A64C171215B632E0018F61B /* Extensions */,
+				9A64C16B215ACB610018F61B /* Featured */,
 				9A6815E7215AC2C400C7BA6E /* Assets */,
 				9AE64C0F215ABFE70005837D /* AppDelegate.swift */,
 				9AE64C11215ABFE70005837D /* ViewController.swift */,
 				9AE64C16215ABFE80005837D /* Assets.xcassets */,
 				9AE64C18215ABFE80005837D /* LaunchScreen.storyboard */,
 				9AE64C1B215ABFE80005837D /* Info.plist */,
+				9A64C16F215B62390018F61B /* GlobalAppearance.swift */,
 			);
 			path = ShudderDemo;
 			sourceTree = "<group>";
@@ -112,6 +160,26 @@
 			path = ShudderDemoTests;
 			sourceTree = "<group>";
 		};
+		A83687674B19FF225CC23C2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7C23CEECA06AB34E7EA2225 /* Pods-ShudderDemo.debug.xcconfig */,
+				999E4B99AC88C640032C38F3 /* Pods-ShudderDemo.release.xcconfig */,
+				1FEF59F0F58DBA54670E48A2 /* Pods-ShudderDemoTests.debug.xcconfig */,
+				9661CC0322AE1779AFD170D0 /* Pods-ShudderDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F170D54530010C6315FFFBE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				553F7B9A2301E2FCF68331CD /* Pods_ShudderDemo.framework */,
+				A9CD2188951F1043FAD8FED3 /* Pods_ShudderDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AE64C29215ABFE80005837D /* Build configuration list for PBXNativeTarget "ShudderDemo" */;
 			buildPhases = (
+				F0C938BDC0BE8BACB3199A6C /* [CP] Check Pods Manifest.lock */,
 				9AE64C08215ABFE70005837D /* Sources */,
 				9AE64C09215ABFE70005837D /* Frameworks */,
 				9AE64C0A215ABFE70005837D /* Resources */,
+				DDBE73533DA61D79A9DECC0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AE64C2C215ABFE80005837D /* Build configuration list for PBXNativeTarget "ShudderDemoTests" */;
 			buildPhases = (
+				5EA2DA9E0ED03D6EF4D2943D /* [CP] Check Pods Manifest.lock */,
 				9AE64C1C215ABFE80005837D /* Sources */,
 				9AE64C1D215ABFE80005837D /* Frameworks */,
 				9AE64C1E215ABFE80005837D /* Resources */,
@@ -208,13 +279,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EA2DA9E0ED03D6EF4D2943D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShudderDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDBE73533DA61D79A9DECC0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShudderDemo/Pods-ShudderDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShudderDemo/Pods-ShudderDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C938BDC0BE8BACB3199A6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShudderDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9AE64C08215ABFE70005837D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9AE64C12215ABFE70005837D /* ViewController.swift in Sources */,
+				9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */,
+				9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */,
 				9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */,
+				9A64C170215B62390018F61B /* GlobalAppearance.swift in Sources */,
+				9A64C16E215ACBC20018F61B /* CategoryRowCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +498,7 @@
 		};
 		9AE64C2A215ABFE80005837D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C23CEECA06AB34E7EA2225 /* Pods-ShudderDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +517,7 @@
 		};
 		9AE64C2B215ABFE80005837D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999E4B99AC88C640032C38F3 /* Pods-ShudderDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +536,7 @@
 		};
 		9AE64C2D215ABFE80005837D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FEF59F0F58DBA54670E48A2 /* Pods-ShudderDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -423,6 +558,7 @@
 		};
 		9AE64C2E215ABFE80005837D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9661CC0322AE1779AFD170D0 /* Pods-ShudderDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

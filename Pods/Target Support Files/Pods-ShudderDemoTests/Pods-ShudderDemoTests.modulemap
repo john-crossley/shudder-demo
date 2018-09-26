@@ -1,0 +1,6 @@
+framework module Pods_ShudderDemoTests {
+  umbrella header "Pods-ShudderDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
