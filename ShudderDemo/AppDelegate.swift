@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let controller = ViewController()
-
+        let viewModel = FeaturedViewModel(service: ShudderMovieService())
+        let controller = FeaturedViewController(with: viewModel)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 

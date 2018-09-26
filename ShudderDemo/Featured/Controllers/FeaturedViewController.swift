@@ -13,9 +13,18 @@ fileprivate extension String {
     static let categoryCellId = "categoryCellId"
 }
 
-class ViewController: UIViewController {
-
+class FeaturedViewController: UIViewController {
+    private let viewModel: FeaturedViewModel
     private var categories: [String] = []
+
+    init(with viewModel: FeaturedViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
@@ -38,7 +47,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension FeaturedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: .categoryCellId, for: indexPath)
         cell.textLabel?.text = "Hello, Shudder"
