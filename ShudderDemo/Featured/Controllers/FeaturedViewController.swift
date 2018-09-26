@@ -11,6 +11,7 @@ import SnapKit
 
 fileprivate extension String {
     static let categoryCellId = "categoryCellId"
+    static let sectionHeaderCellId = "sectionHeaderCellId"
 }
 
 class FeaturedViewController: UIViewController {
@@ -33,7 +34,9 @@ class FeaturedViewController: UIViewController {
         let view = UITableView(frame: .zero, style: .plain)
         view.separatorStyle = .none
         view.dataSource = self
+        view.delegate = self
         view.register(CategoryRowCell.self, forCellReuseIdentifier: .categoryCellId)
+        view.register(UINib(nibName: "SectionHeaderView", bundle: .main), forHeaderFooterViewReuseIdentifier: .sectionHeaderCellId)
         view.backgroundColor = UIColor.Theme.backgroundColor
         return view
     }()
@@ -67,9 +70,18 @@ extension FeaturedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+}
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].category
+extension FeaturedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard section != 0 else { return nil }
+
+        let category = sections[section].category
+
+        let view = tableView
+            .dequeueReusableHeaderFooterView(withIdentifier: .sectionHeaderCellId) as! SectionHeaderView
+        view.bind(model: HeaderViewModel(with: category))
+        return view
     }
 }
 
