@@ -19,6 +19,7 @@
 		9A64C180215B72690018F61B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C17F215B72690018F61B /* Item.swift */; };
 		9A64C182215B738D0018F61B /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C181215B738D0018F61B /* MovieService.swift */; };
 		9A64C184215B74E20018F61B /* FeaturedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C183215B74E20018F61B /* FeaturedViewModel.swift */; };
+		9A64C189215B7A070018F61B /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C188215B7A070018F61B /* ThreadHelper.swift */; };
 		9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */; };
 		9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C0F215ABFE70005837D /* AppDelegate.swift */; };
 		9AE64C12215ABFE70005837D /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C11215ABFE70005837D /* FeaturedViewController.swift */; };
@@ -52,6 +53,7 @@
 		9A64C17F215B72690018F61B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9A64C181215B738D0018F61B /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		9A64C183215B74E20018F61B /* FeaturedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewModel.swift; sourceTree = "<group>"; };
+		9A64C188215B7A070018F61B /* ThreadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
 		9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
 		9AE64C0C215ABFE70005837D /* ShudderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShudderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE64C0F215ABFE70005837D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		9A64C187215B79FA0018F61B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9A64C188215B7A070018F61B /* ThreadHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9A6815E7215AC2C400C7BA6E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		9AE64C0E215ABFE70005837D /* ShudderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9A64C187215B79FA0018F61B /* Utilities */,
 				9A64C179215B6BD00018F61B /* Services */,
 				9A64C171215B632E0018F61B /* Extensions */,
 				9A64C16B215ACB610018F61B /* Featured */,
@@ -405,6 +416,7 @@
 				9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */,
 				9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */,
 				9A64C182215B738D0018F61B /* MovieService.swift in Sources */,
+				9A64C189215B7A070018F61B /* ThreadHelper.swift in Sources */,
 				9A64C17B215B6BEB0018F61B /* ShudderMovieService.swift in Sources */,
 				9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */,
 				9A64C17E215B72410018F61B /* Section.swift in Sources */,

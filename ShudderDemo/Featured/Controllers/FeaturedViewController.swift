@@ -15,7 +15,10 @@ fileprivate extension String {
 
 class FeaturedViewController: UIViewController {
     private let viewModel: FeaturedViewModel
-    private var categories: [String] = []
+
+    private var categories: [String] = [] {
+        didSet { tableView.reloadData() }
+    }
 
     init(with viewModel: FeaturedViewModel) {
         self.viewModel = viewModel
@@ -43,6 +46,9 @@ class FeaturedViewController: UIViewController {
             make.edges.equalTo(self.view)
         }
 
+        viewModel.delegate = self
+        viewModel.fetch()
+
         title = "Shudder Featured Demo"
     }
 }
@@ -63,3 +69,8 @@ extension FeaturedViewController: UITableViewDataSource {
     }
 }
 
+extension FeaturedViewController: FeaturedViewModelDelegate {
+    func didUpdate(state: FeaturedViewModel.State) {
+        print(">>> STATE=\(state)")
+    }
+}
