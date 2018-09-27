@@ -13,12 +13,10 @@ fileprivate extension String {
     static let movieItemCellId: String = "movieItemCellId"
 }
 
-class CategoryRowCell: UITableViewCell {
+class CollectionCell: UITableViewCell {
 
     private var items: [Item] = [] {
-        didSet {
-            collectionView.reloadData()
-        }
+        didSet { collectionView.reloadData() }
     }
 
     private lazy var collectionView: UICollectionView = {
@@ -52,12 +50,12 @@ class CategoryRowCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func bind(items: [Item]) {
+    func bind(_ items: [Item]) {
         self.items = items
     }
 }
 
-extension CategoryRowCell: UICollectionViewDataSource {
+extension CollectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -73,7 +71,7 @@ extension CategoryRowCell: UICollectionViewDataSource {
     }
 }
 
-extension CategoryRowCell: UICollectionViewDelegateFlowLayout {
+extension CollectionCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100 , height: 140)
     }

@@ -10,11 +10,13 @@ import UIKit
 import SnapKit
 
 fileprivate extension String {
-    static let categoryCellId = "categoryCellId"
+    static let collectionCellId = "collectionCellId"
+    static let heroCellId = "heroCellId"
     static let sectionHeaderCellId = "sectionHeaderCellId"
 }
 
 class FeaturedViewController: UIViewController {
+
     private let viewModel: FeaturedViewModel
 
     private var sections: [Section] = [] {
@@ -35,7 +37,8 @@ class FeaturedViewController: UIViewController {
         view.separatorStyle = .none
         view.dataSource = self
         view.delegate = self
-        view.register(CategoryRowCell.self, forCellReuseIdentifier: .categoryCellId)
+        view.register(CollectionCell.self, forCellReuseIdentifier: .collectionCellId)
+        view.register(HeroRowCell.self, forCellReuseIdentifier: .heroCellId)
         view.register(UINib(nibName: "SectionHeaderView", bundle: .main), forHeaderFooterViewReuseIdentifier: .sectionHeaderCellId)
         view.backgroundColor = UIColor.Theme.backgroundColor
         return view
@@ -59,9 +62,18 @@ class FeaturedViewController: UIViewController {
 
 extension FeaturedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: .categoryCellId, for: indexPath) as! CategoryRowCell
-        cell.bind(items: sections[indexPath.section].items)
-        return cell
+        let section = sections[indexPath.section]
+
+        switch section.type {
+        case .hero:
+            let cell = tableView.dequeueReusableCell(withIdentifier: .heroCellId, for: indexPath) as! HeroRowCell
+            cell.bind(section.items)
+            return cell
+        case .collection:
+            let cell = tableView.dequeueReusableCell(withIdentifier: .collectionCellId, for: indexPath) as! CollectionCell
+            cell.bind(section.items)
+            return cell
+        }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,12 +91,16 @@ extension FeaturedViewController: UITableViewDataSource {
 
 extension FeaturedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let category = sections[section].category
+        let section = sections[section]
 
-        let view = tableView
-            .dequeueReusableHeaderFooterView(withIdentifier: .sectionHeaderCellId) as! SectionHeaderView
-        view.bind(model: HeaderViewModel(with: category))
-        return view
+        switch section.type {
+        case .hero: return nil
+        case .collection:
+            let view = tableView
+                .dequeueReusableHeaderFooterView(withIdentifier: .sectionHeaderCellId) as! SectionHeaderView
+            view.bind(model: HeaderViewModel(with: section.category))
+            return view
+        }
     }
 }
 

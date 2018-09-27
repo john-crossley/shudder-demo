@@ -34,15 +34,6 @@ class FeaturedViewModel {
 
     init(service: MovieService) {
         self.service = service
-
-        service.featured { result in
-            switch result {
-            case .success(let result):
-                print(">>> \(result)")
-            case .failure(let error):
-                print(">>> \(error)")
-            }
-        }
     }
 
     func fetch() {

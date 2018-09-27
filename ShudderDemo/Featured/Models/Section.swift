@@ -8,8 +8,13 @@
 
 import Foundation
 
+enum SectionType: String, Codable {
+    case hero
+    case collection
+}
+
 struct Section: Codable {
-    let type: String
+    let type: SectionType
     let category: String
     let items: [Item]
 }

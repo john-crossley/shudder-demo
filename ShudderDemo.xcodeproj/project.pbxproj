@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5A1855CC18203B6D8E836A83 /* Pods_ShudderDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CD2188951F1043FAD8FED3 /* Pods_ShudderDemoTests.framework */; };
 		9701A744B326931769847177 /* Pods_ShudderDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553F7B9A2301E2FCF68331CD /* Pods_ShudderDemo.framework */; };
-		9A64C16E215ACBC20018F61B /* CategoryRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C16D215ACBC20018F61B /* CategoryRowCell.swift */; };
 		9A64C170215B62390018F61B /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C16F215B62390018F61B /* GlobalAppearance.swift */; };
 		9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C172215B63390018F61B /* UIColor+Extensions.swift */; };
 		9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C174215B69710018F61B /* UINavigationController+Extensions.swift */; };
@@ -24,6 +23,8 @@
 		9A64C18E215BFC510018F61B /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C18D215BFC510018F61B /* SectionHeaderView.swift */; };
 		9A64C190215BFCAE0018F61B /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C18F215BFCAE0018F61B /* HeaderViewModel.swift */; };
 		9A64C193215C008B0018F61B /* MovieItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C192215C008B0018F61B /* MovieItemCell.swift */; };
+		9A64C195215D08D10018F61B /* HeroRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C194215D08D10018F61B /* HeroRowCell.swift */; };
+		9A64C199215D248D0018F61B /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C198215D248D0018F61B /* CollectionCell.swift */; };
 		9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */; };
 		9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C0F215ABFE70005837D /* AppDelegate.swift */; };
 		9AE64C12215ABFE70005837D /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C11215ABFE70005837D /* FeaturedViewController.swift */; };
@@ -47,7 +48,6 @@
 		553F7B9A2301E2FCF68331CD /* Pods_ShudderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShudderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9661CC0322AE1779AFD170D0 /* Pods-ShudderDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemoTests/Pods-ShudderDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		999E4B99AC88C640032C38F3 /* Pods-ShudderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemo/Pods-ShudderDemo.release.xcconfig"; sourceTree = "<group>"; };
-		9A64C16D215ACBC20018F61B /* CategoryRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowCell.swift; sourceTree = "<group>"; };
 		9A64C16F215B62390018F61B /* GlobalAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
 		9A64C172215B63390018F61B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9A64C174215B69710018F61B /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -62,6 +62,8 @@
 		9A64C18D215BFC510018F61B /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		9A64C18F215BFCAE0018F61B /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
 		9A64C192215C008B0018F61B /* MovieItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemCell.swift; sourceTree = "<group>"; };
+		9A64C194215D08D10018F61B /* HeroRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRowCell.swift; sourceTree = "<group>"; };
+		9A64C198215D248D0018F61B /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
 		9AE64C0C215ABFE70005837D /* ShudderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShudderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE64C0F215ABFE70005837D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,9 +113,10 @@
 		9A64C16C215ACB680018F61B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9A64C16D215ACBC20018F61B /* CategoryRowCell.swift */,
+				9A64C198215D248D0018F61B /* CollectionCell.swift */,
 				9A64C18B215BFB240018F61B /* SectionHeaderView.xib */,
 				9A64C18D215BFC510018F61B /* SectionHeaderView.swift */,
+				9A64C194215D08D10018F61B /* HeroRowCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,18 +437,19 @@
 			files = (
 				9AE64C12215ABFE70005837D /* FeaturedViewController.swift in Sources */,
 				9A64C180215B72690018F61B /* Item.swift in Sources */,
+				9A64C195215D08D10018F61B /* HeroRowCell.swift in Sources */,
 				9A64C18E215BFC510018F61B /* SectionHeaderView.swift in Sources */,
 				9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */,
 				9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */,
 				9A64C182215B738D0018F61B /* MovieService.swift in Sources */,
 				9A64C193215C008B0018F61B /* MovieItemCell.swift in Sources */,
+				9A64C199215D248D0018F61B /* CollectionCell.swift in Sources */,
 				9A64C189215B7A070018F61B /* ThreadHelper.swift in Sources */,
 				9A64C17B215B6BEB0018F61B /* ShudderMovieService.swift in Sources */,
 				9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */,
 				9A64C17E215B72410018F61B /* Section.swift in Sources */,
 				9A64C170215B62390018F61B /* GlobalAppearance.swift in Sources */,
 				9A64C190215BFCAE0018F61B /* HeaderViewModel.swift in Sources */,
-				9A64C16E215ACBC20018F61B /* CategoryRowCell.swift in Sources */,
 				9A64C184215B74E20018F61B /* FeaturedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
