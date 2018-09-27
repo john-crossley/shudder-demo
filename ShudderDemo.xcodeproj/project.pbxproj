@@ -23,7 +23,7 @@
 		9A64C18E215BFC510018F61B /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C18D215BFC510018F61B /* SectionHeaderView.swift */; };
 		9A64C190215BFCAE0018F61B /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C18F215BFCAE0018F61B /* HeaderViewModel.swift */; };
 		9A64C193215C008B0018F61B /* MovieItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C192215C008B0018F61B /* MovieItemCell.swift */; };
-		9A64C195215D08D10018F61B /* HeroRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C194215D08D10018F61B /* HeroRowCell.swift */; };
+		9A64C195215D08D10018F61B /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C194215D08D10018F61B /* HeroCell.swift */; };
 		9A64C199215D248D0018F61B /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C198215D248D0018F61B /* CollectionCell.swift */; };
 		9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */; };
 		9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C0F215ABFE70005837D /* AppDelegate.swift */; };
@@ -62,7 +62,7 @@
 		9A64C18D215BFC510018F61B /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		9A64C18F215BFCAE0018F61B /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
 		9A64C192215C008B0018F61B /* MovieItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemCell.swift; sourceTree = "<group>"; };
-		9A64C194215D08D10018F61B /* HeroRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRowCell.swift; sourceTree = "<group>"; };
+		9A64C194215D08D10018F61B /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		9A64C198215D248D0018F61B /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
 		9AE64C0C215ABFE70005837D /* ShudderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShudderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +116,7 @@
 				9A64C198215D248D0018F61B /* CollectionCell.swift */,
 				9A64C18B215BFB240018F61B /* SectionHeaderView.xib */,
 				9A64C18D215BFC510018F61B /* SectionHeaderView.swift */,
-				9A64C194215D08D10018F61B /* HeroRowCell.swift */,
+				9A64C194215D08D10018F61B /* HeroCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,7 +437,7 @@
 			files = (
 				9AE64C12215ABFE70005837D /* FeaturedViewController.swift in Sources */,
 				9A64C180215B72690018F61B /* Item.swift in Sources */,
-				9A64C195215D08D10018F61B /* HeroRowCell.swift in Sources */,
+				9A64C195215D08D10018F61B /* HeroCell.swift in Sources */,
 				9A64C18E215BFC510018F61B /* SectionHeaderView.swift in Sources */,
 				9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */,
 				9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */,

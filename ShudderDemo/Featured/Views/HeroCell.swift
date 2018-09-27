@@ -1,24 +1,15 @@
 //
-//  CategoryRowCell.swift
+//  HeroRowCell.swift
 //  ShudderDemo
 //
-//  Created by John Crossley on 25/09/2018.
+//  Created by John Crossley on 27/09/2018.
 //  Copyright © 2018 John Crossley. All rights reserved.
 //
 
 import UIKit
 import SnapKit
 
-fileprivate struct Constants {
-    static let fullyVisibleItemCount = 3
-    static let spacing = 8
-}
-
-fileprivate extension String {
-    static let movieItemCellId: String = "movieItemCellId"
-}
-
-class CollectionCell: UITableViewCell {
+class HeroCell: UITableViewCell {
 
     private var items: [Item] = [] {
         didSet { collectionView.reloadData() }
@@ -26,13 +17,12 @@ class CollectionCell: UITableViewCell {
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 8
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
 
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.register(MovieItemCell.self, forCellWithReuseIdentifier: .movieItemCellId)
+        view.register(MovieItemCell.self, forCellWithReuseIdentifier: "movieItemCellId")
         view.dataSource = self
         view.delegate = self
         view.backgroundColor = .clear
@@ -61,7 +51,7 @@ class CollectionCell: UITableViewCell {
     }
 }
 
-extension CollectionCell: UICollectionViewDataSource {
+extension HeroCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -71,17 +61,15 @@ extension CollectionCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .movieItemCellId, for: indexPath) as! MovieItemCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieItemCellId", for: indexPath) as! MovieItemCell
         cell.bind()
         return cell
     }
 }
 
-extension CollectionCell: UICollectionViewDelegateFlowLayout {
+extension HeroCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        let width = (Int(collectionView.bounds.width) / Constants.fullyVisibleItemCount) - Constants.fullyVisibleItemCount * Constants.spacing
-
-        return CGSize(width: width, height: 160)
+        let width = collectionView.bounds.width
+        return CGSize(width: width - 16 , height: 200)
     }
 }

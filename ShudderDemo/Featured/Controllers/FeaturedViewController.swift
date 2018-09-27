@@ -38,7 +38,7 @@ class FeaturedViewController: UIViewController {
         view.dataSource = self
         view.delegate = self
         view.register(CollectionCell.self, forCellReuseIdentifier: .collectionCellId)
-        view.register(HeroRowCell.self, forCellReuseIdentifier: .heroCellId)
+        view.register(HeroCell.self, forCellReuseIdentifier: .heroCellId)
         view.register(UINib(nibName: "SectionHeaderView", bundle: .main), forHeaderFooterViewReuseIdentifier: .sectionHeaderCellId)
         view.backgroundColor = UIColor.Theme.backgroundColor
         return view
@@ -66,7 +66,7 @@ extension FeaturedViewController: UITableViewDataSource {
 
         switch section.type {
         case .hero:
-            let cell = tableView.dequeueReusableCell(withIdentifier: .heroCellId, for: indexPath) as! HeroRowCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: .heroCellId, for: indexPath) as! HeroCell
             cell.bind(section.items)
             return cell
         case .collection:
@@ -85,7 +85,7 @@ extension FeaturedViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return indexPath.section == 0 ? 216 : 160
     }
 }
 
@@ -101,6 +101,10 @@ extension FeaturedViewController: UITableViewDelegate {
             view.bind(model: HeaderViewModel(with: section.category))
             return view
         }
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 0 ? 0 : 40
     }
 }
 

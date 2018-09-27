@@ -13,8 +13,8 @@ class MovieItemCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 8
-        imageView.clipsToBounds = true
+//        imageView.layer.cornerRadius = 8
+//        imageView.clipsToBounds = true
         return imageView
     }()
 
@@ -26,7 +26,9 @@ class MovieItemCell: UICollectionViewCell {
             make.edges.equalTo(self)
         }
 
-        backgroundColor = .blue
+        backgroundColor = .lightGray
+        layer.cornerRadius = 4
+        layer.masksToBounds = true
     }
 
     required init?(coder aDecoder: NSCoder) {
