@@ -25,6 +25,9 @@
 		9A64C193215C008B0018F61B /* MovieItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C192215C008B0018F61B /* MovieItemCell.swift */; };
 		9A64C195215D08D10018F61B /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C194215D08D10018F61B /* HeroCell.swift */; };
 		9A64C199215D248D0018F61B /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C198215D248D0018F61B /* CollectionCell.swift */; };
+		9A64C19B215D6C690018F61B /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C19A215D6C690018F61B /* FlickrService.swift */; };
+		9A64C19F215D75ED0018F61B /* ImageRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C19E215D75ED0018F61B /* ImageRequestService.swift */; };
+		9A64C1A2215D760B0018F61B /* FlickrResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C1A1215D760B0018F61B /* FlickrResponse.swift */; };
 		9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */; };
 		9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C0F215ABFE70005837D /* AppDelegate.swift */; };
 		9AE64C12215ABFE70005837D /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C11215ABFE70005837D /* FeaturedViewController.swift */; };
@@ -64,6 +67,9 @@
 		9A64C192215C008B0018F61B /* MovieItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemCell.swift; sourceTree = "<group>"; };
 		9A64C194215D08D10018F61B /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		9A64C198215D248D0018F61B /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		9A64C19A215D6C690018F61B /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
+		9A64C19E215D75ED0018F61B /* ImageRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequestService.swift; sourceTree = "<group>"; };
+		9A64C1A1215D760B0018F61B /* FlickrResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResponse.swift; sourceTree = "<group>"; };
 		9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
 		9AE64C0C215ABFE70005837D /* ShudderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShudderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE64C0F215ABFE70005837D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,8 +147,10 @@
 		9A64C179215B6BD00018F61B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9A64C19C215D75CB0018F61B /* Flickr */,
 				9A64C17A215B6BEB0018F61B /* ShudderMovieService.swift */,
 				9A64C181215B738D0018F61B /* MovieService.swift */,
+				9A64C19E215D75ED0018F61B /* ImageRequestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,6 +195,23 @@
 				9A64C192215C008B0018F61B /* MovieItemCell.swift */,
 			);
 			path = Row;
+			sourceTree = "<group>";
+		};
+		9A64C19C215D75CB0018F61B /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				9A64C1A0215D75F50018F61B /* Models */,
+				9A64C19A215D6C690018F61B /* FlickrService.swift */,
+			);
+			path = Flickr;
+			sourceTree = "<group>";
+		};
+		9A64C1A0215D75F50018F61B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A64C1A1215D760B0018F61B /* FlickrResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9A6815E7215AC2C400C7BA6E /* Assets */ = {
@@ -442,6 +467,7 @@
 				9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */,
 				9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */,
 				9A64C182215B738D0018F61B /* MovieService.swift in Sources */,
+				9A64C19F215D75ED0018F61B /* ImageRequestService.swift in Sources */,
 				9A64C193215C008B0018F61B /* MovieItemCell.swift in Sources */,
 				9A64C199215D248D0018F61B /* CollectionCell.swift in Sources */,
 				9A64C189215B7A070018F61B /* ThreadHelper.swift in Sources */,
@@ -450,6 +476,8 @@
 				9A64C17E215B72410018F61B /* Section.swift in Sources */,
 				9A64C170215B62390018F61B /* GlobalAppearance.swift in Sources */,
 				9A64C190215BFCAE0018F61B /* HeaderViewModel.swift in Sources */,
+				9A64C19B215D6C690018F61B /* FlickrService.swift in Sources */,
+				9A64C1A2215D760B0018F61B /* FlickrResponse.swift in Sources */,
 				9A64C184215B74E20018F61B /* FeaturedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

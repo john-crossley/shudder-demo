@@ -13,11 +13,11 @@ enum MovieServiceError: Error {
     case dataInvalid
 }
 
-enum Result<T> {
+enum Result<T, E: Error> {
     case success(T)
-    case failure(MovieServiceError)
+    case failure(E)
 }
 
 protocol MovieService {
-    func featured(callback: @escaping (Result<[Section]>) -> Void)
+    func featured(callback: @escaping (Result<[Section], MovieServiceError>) -> Void)
 }

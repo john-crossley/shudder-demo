@@ -10,7 +10,7 @@ import Foundation
 
 class ShudderMovieService: MovieService {
 
-    func featured(callback: @escaping (Result<[Section]>) -> Void) {
+    func featured(callback: @escaping (Result<[Section], MovieServiceError>) -> Void) {
         guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {
             callback(.failure(.dataNotFound))
             return

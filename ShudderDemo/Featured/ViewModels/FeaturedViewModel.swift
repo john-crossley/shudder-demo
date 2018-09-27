@@ -34,6 +34,10 @@ class FeaturedViewModel {
 
     init(service: MovieService) {
         self.service = service
+
+        FlickrRequestService.init().request(for: "scary movie") { result in
+            print(result)
+        }
     }
 
     func fetch() {
