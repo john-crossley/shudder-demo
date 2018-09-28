@@ -29,6 +29,7 @@
 		9A64C19F215D75ED0018F61B /* ImageRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C19E215D75ED0018F61B /* ImageRequestService.swift */; };
 		9A64C1A2215D760B0018F61B /* FlickrResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C1A1215D760B0018F61B /* FlickrResponse.swift */; };
 		9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */; };
+		9AC061C6215E058F00B1D3C7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC061C5215E058F00B1D3C7 /* Photo.swift */; };
 		9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C0F215ABFE70005837D /* AppDelegate.swift */; };
 		9AE64C12215ABFE70005837D /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C11215ABFE70005837D /* FeaturedViewController.swift */; };
 		9AE64C17215ABFE80005837D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE64C16215ABFE80005837D /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		9A64C19E215D75ED0018F61B /* ImageRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequestService.swift; sourceTree = "<group>"; };
 		9A64C1A1215D760B0018F61B /* FlickrResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResponse.swift; sourceTree = "<group>"; };
 		9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
+		9AC061C5215E058F00B1D3C7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		9AE64C0C215ABFE70005837D /* ShudderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShudderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE64C0F215ABFE70005837D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE64C11215ABFE70005837D /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				9A64C1A1215D760B0018F61B /* FlickrResponse.swift */,
+				9AC061C5215E058F00B1D3C7 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				9A64C180215B72690018F61B /* Item.swift in Sources */,
 				9A64C195215D08D10018F61B /* HeroCell.swift in Sources */,
 				9A64C18E215BFC510018F61B /* SectionHeaderView.swift in Sources */,
+				9AC061C6215E058F00B1D3C7 /* Photo.swift in Sources */,
 				9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */,
 				9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */,
 				9A64C182215B738D0018F61B /* MovieService.swift in Sources */,

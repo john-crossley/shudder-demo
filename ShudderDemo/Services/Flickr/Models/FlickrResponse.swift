@@ -8,20 +8,24 @@
 
 import Foundation
 
-struct FlickrResponse: Codable {
-    let photos: Photos
-}
+struct Flickr: Codable {
 
-struct Photos: Codable {
-    let photos: [Photo]
-
-    private enum CodingKeys: String, CodingKey {
-        case photos = "photo"
+    struct Photo: Codable {
+        let id: String
+        let farm: Int
+        let secret: String
+        let server: String
     }
-}
 
-struct Photo: Codable {
-    let id: String
-    let farm: Int
-    let secret: String
+    struct Photos: Codable {
+        let photos: [Flickr.Photo]
+
+        private enum CodingKeys: String, CodingKey {
+            case photos = "photo"
+        }
+    }
+
+    struct Response: Codable {
+        let photos: Flickr.Photos
+    }
 }

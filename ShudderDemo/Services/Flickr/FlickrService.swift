@@ -14,9 +14,14 @@ fileprivate struct Constants {
 
 class FlickrRequestService: ImageRequestService {
 
-    typealias Model = FlickrResponse
+    typealias Model = [Photo]
 
-    #warning("REMOVE API KEY BEFORE COMMITING")
+    private func formatImageUrl(from photo: Flickr.Photo) -> Photo? {
+        let urlString = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_m.jpg"
+        guard let url = URL(string: urlString) else { return nil }
+        return Photo(url: url)
+    }
+
     func request(for query: String, completion: @escaping (Result<Model, ImageRequestServiceError>) -> Void) {
         guard let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .alphanumerics) else {
             print("Failed encoding query: \(query)")
@@ -47,7 +52,10 @@ class FlickrRequestService: ImageRequestService {
 
             let decoder = JSONDecoder()
             do {
-                let results = try decoder.decode(Model.self, from: data)
+
+                let results = try decoder.decode(Flickr.Response.self, from: data)
+                    .photos.photos.compactMap { self.formatImageUrl(from: $0) }
+
                 completion(.success(results))
             } catch let decodingError {
                 print("Error decoding data: \(decodingError.localizedDescription)")
