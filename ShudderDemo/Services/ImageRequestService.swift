@@ -17,6 +17,5 @@ enum ImageRequestServiceError: Error {
 }
 
 protocol ImageRequestService: class {
-    associatedtype Model: Codable
-    func request(for query: String, completion: @escaping (Result<Model, ImageRequestServiceError>) -> Void)
+    func request(for section: Section, completion: @escaping (Result<[Photo], ImageRequestServiceError>) -> Void)
 }

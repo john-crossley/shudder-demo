@@ -2,120 +2,25 @@
     {
         "type": "hero",
         "category": "",
-        "items": [
-            {
-                "title": "Hello House LLC II",
-                "subtitle": "The Abandon Hotel",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Hounds of Love",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Birth of the Living Dead",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Still/Born",
-                "subtitle": "The Abandon Hotel",
-                "image": "https://placekitten.com/150/200"
-            }
-        ]
+        "query": "Lego Movie",
+        "limit": 4
     },
     {
         "type": "collection",
         "category": "Newly Added",
-        "items": [
-            {
-                "title": "Item One",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Two",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Three",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Four",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Five",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            }
-        ]
+        "query": "Top 100 Movies",
+        "limit": 8
     },
     {
         "type": "collection",
         "category": "Curator's Choice",
-        "items": [
-            {
-                "title": "Item One",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Two",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Three",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Four",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Five",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            }
-        ]
+        "query": "Hellraiser",
+        "limit": 8
     },
     {
         "type": "collection",
         "category": "Hammer's Hellions",
-        "items": [
-            {
-                "title": "Item One",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Two",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Three",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Four",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            },
-            {
-                "title": "Item Five",
-                "subtitle": "",
-                "image": "https://placekitten.com/150/200"
-            }
-        ]
+        "query": "hammers hellions",
+        "limit": 8
     }
 ]

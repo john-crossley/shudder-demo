@@ -20,7 +20,7 @@ class FeaturedViewModel {
     enum State {
         case idle
         case loading
-        case loaded([Section])
+        case loaded([SectionViewModel])
         case error
     }
 
@@ -34,10 +34,6 @@ class FeaturedViewModel {
 
     init(service: MovieService) {
         self.service = service
-
-        FlickrRequestService.init().request(for: "scary movie") { result in
-            print(result)
-        }
     }
 
     func fetch() {
@@ -54,7 +50,8 @@ class FeaturedViewModel {
         service.featured { result in
             switch result {
             case .success(let sections):
-                self.state = .loaded(sections)
+                let viewModels = sections.map { SectionViewModel(with: $0, service: FlickrRequestService()) }
+                self.state = .loaded(viewModels)
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
                 self.state = .error

@@ -19,7 +19,7 @@ class FeaturedViewController: UIViewController {
 
     private let viewModel: FeaturedViewModel
 
-    private var sections: [Section] = [] {
+    private var sections: [SectionViewModel] = [] {
         didSet { tableView.reloadData() }
     }
 
@@ -62,16 +62,16 @@ class FeaturedViewController: UIViewController {
 
 extension FeaturedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let section = sections[indexPath.section]
+        let viewModel = sections[indexPath.section]
 
-        switch section.type {
+        switch viewModel.type {
         case .hero:
             let cell = tableView.dequeueReusableCell(withIdentifier: .heroCellId, for: indexPath) as! HeroCell
-            cell.bind(section.items)
+            cell.bind(using: viewModel)
             return cell
         case .collection:
             let cell = tableView.dequeueReusableCell(withIdentifier: .collectionCellId, for: indexPath) as! CollectionCell
-            cell.bind(section.items)
+//            cell.bind(section.items)
             return cell
         }
     }

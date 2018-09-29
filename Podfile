@@ -7,6 +7,7 @@ target 'ShudderDemo' do
 
   # Pods for ShudderDemo
   pod 'SnapKit'
+  pod 'AlamofireImage', '~> 3.4'
 
   target 'ShudderDemoTests' do
     inherit! :search_paths

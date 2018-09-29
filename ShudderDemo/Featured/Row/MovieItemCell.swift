@@ -10,19 +10,17 @@ import UIKit
 import SnapKit
 
 class MovieItemCell: UICollectionViewCell {
-    private let imageView: UIImageView = {
+    private let movieImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-//        imageView.layer.cornerRadius = 8
-//        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        contentView.addSubview(imageView)
-        imageView.snp.makeConstraints { (make) in
+        contentView.addSubview(movieImageView)
+        movieImageView.snp.makeConstraints { (make) in
             make.edges.equalTo(self)
         }
 
@@ -35,7 +33,7 @@ class MovieItemCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func bind() {
-
+    func bind(photo: Photo) {
+        movieImageView.setImage(photo.url)
     }
 }

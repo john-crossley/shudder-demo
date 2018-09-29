@@ -11,7 +11,7 @@ import SnapKit
 
 class HeroCell: UITableViewCell {
 
-    private var items: [Item] = [] {
+    private var photos: [Photo] = [] {
         didSet { collectionView.reloadData() }
     }
 
@@ -46,14 +46,15 @@ class HeroCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func bind(_ items: [Item]) {
-        self.items = items
+    func bind(using viewModel: SectionViewModel) {
+        viewModel.delegate = self
+        viewModel.fetch()
     }
 }
 
 extension HeroCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return photos.count
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -62,7 +63,7 @@ extension HeroCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieItemCellId", for: indexPath) as! MovieItemCell
-        cell.bind()
+        cell.bind(photo: photos[indexPath.item])
         return cell
     }
 }
@@ -71,5 +72,17 @@ extension HeroCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
         return CGSize(width: width - 16 , height: 200)
+    }
+}
+
+extension HeroCell: SectionViewModelDelegate {
+    func didUpdate(state: SectionViewModel.State) {
+        switch state {
+        case .idle: break
+        case .loading: break
+        case .loaded(let photos):
+            self.photos = photos
+        case .error: break
+        }
     }
 }

@@ -20,7 +20,7 @@ fileprivate extension String {
 
 class CollectionCell: UITableViewCell {
 
-    private var items: [Item] = [] {
+    private var items: [Photo] = [] {
         didSet { collectionView.reloadData() }
     }
 
@@ -55,10 +55,6 @@ class CollectionCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    func bind(_ items: [Item]) {
-        self.items = items
-    }
 }
 
 extension CollectionCell: UICollectionViewDataSource {
@@ -72,7 +68,7 @@ extension CollectionCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .movieItemCellId, for: indexPath) as! MovieItemCell
-        cell.bind()
+//        cell.bind(photo: <#T##Photo#>)
         return cell
     }
 }

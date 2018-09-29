@@ -9,12 +9,12 @@
 import Foundation
 
 fileprivate struct Constants {
-    static let apiKey = ""
+    static let apiKey = "af0a9941948b6858b22ba3d7cb85bbad"
 }
 
 class FlickrRequestService: ImageRequestService {
 
-    typealias Model = [Photo]
+    private var task: URLSessionDataTask?
 
     private func formatImageUrl(from photo: Flickr.Photo) -> Photo? {
         let urlString = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_m.jpg"
@@ -22,14 +22,16 @@ class FlickrRequestService: ImageRequestService {
         return Photo(url: url)
     }
 
-    func request(for query: String, completion: @escaping (Result<Model, ImageRequestServiceError>) -> Void) {
-        guard let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .alphanumerics) else {
-            print("Failed encoding query: \(query)")
+    func request(for section: Section, completion: @escaping (Result<[Photo], ImageRequestServiceError>) -> Void) {
+        task?.cancel()
+
+        guard let encodedQuery = section.query.addingPercentEncoding(withAllowedCharacters: .alphanumerics) else {
+            print("Failed encoding query: \(section.query)")
             completion(.failure(.failedEncodingQuery))
             return
         }
 
-        let baseUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(Constants.apiKey)&text=\(encodedQuery)&per_page=50&format=json&nojsoncallback=1"
+        let baseUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(Constants.apiKey)&text=\(encodedQuery)&per_page=\(section.limit)&format=json&nojsoncallback=1"
 
         guard let url = URL(string: baseUrl) else {
             print("Invalid URL \(baseUrl)")
@@ -38,7 +40,8 @@ class FlickrRequestService: ImageRequestService {
         }
 
         let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+
+        task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 print("Invalid request: \(error.localizedDescription)")
                 completion(.failure(.invalidRequest))
@@ -61,6 +64,8 @@ class FlickrRequestService: ImageRequestService {
                 print("Error decoding data: \(decodingError.localizedDescription)")
                 completion(.failure(.unexpectedDataInResponse))
             }
-        }.resume()
+        }
+
+        task?.resume()
     }
 }

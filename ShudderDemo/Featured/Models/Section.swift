@@ -16,5 +16,6 @@ enum SectionType: String, Codable {
 struct Section: Codable {
     let type: SectionType
     let category: String
-    let items: [Item]
+    let query: String
+    let limit: Int
 }
