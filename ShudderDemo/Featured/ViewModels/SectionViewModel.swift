@@ -48,6 +48,11 @@ class SectionViewModel {
     }
 
     func fetch() {
+        self.state = .loading
+        background { self.loadPhotosForSection() }
+    }
+
+    private func loadPhotosForSection() {
         service.request(for: section) { result in
             switch result {
             case .success(let photos):

@@ -30,11 +30,23 @@ class HeroCell: UITableViewCell {
         return view
     }()
 
+    private lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .white)
+        view.hidesWhenStopped = true
+        view.color = UIColor.Theme.accentColor
+        return view
+    }()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         backgroundColor = .clear
         contentView.backgroundColor = .clear
+
+        contentView.addSubview(activityIndicatorView)
+        activityIndicatorView.snp.makeConstraints { make in
+            make.centerX.centerY.equalTo(contentView)
+        }
 
         contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
@@ -79,8 +91,10 @@ extension HeroCell: SectionViewModelDelegate {
     func didUpdate(state: SectionViewModel.State) {
         switch state {
         case .idle: break
-        case .loading: break
+        case .loading:
+            activityIndicatorView.startAnimating()
         case .loaded(let photos):
+            activityIndicatorView.stopAnimating()
             self.photos = photos
         case .error: break
         }
