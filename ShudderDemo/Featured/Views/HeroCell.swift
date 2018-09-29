@@ -75,7 +75,8 @@ extension HeroCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let viewModel = photos[indexPath.row]
+        let viewModel = photos[indexPath.item]
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieItemCellId", for: indexPath) as! MovieItemCell
         cell.bind(photo: viewModel)
         return cell
@@ -85,7 +86,7 @@ extension HeroCell: UICollectionViewDataSource {
 extension HeroCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
-        return CGSize(width: width - 16 , height: 200)
+        return CGSize(width: width - (Constants.spacing * 2) , height: 200)
     }
 }
 

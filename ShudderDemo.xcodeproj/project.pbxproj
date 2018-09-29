@@ -36,6 +36,7 @@
 		9AE64C17215ABFE80005837D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE64C16215ABFE80005837D /* Assets.xcassets */; };
 		9AE64C1A215ABFE80005837D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE64C18215ABFE80005837D /* LaunchScreen.storyboard */; };
 		9AE64C25215ABFE80005837D /* ShudderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C24215ABFE80005837D /* ShudderDemoTests.swift */; };
+		9AEEB419215FA1770049288B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEB418215FA1770049288B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		9AE64C20215ABFE80005837D /* ShudderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShudderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE64C24215ABFE80005837D /* ShudderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShudderDemoTests.swift; sourceTree = "<group>"; };
 		9AE64C26215ABFE80005837D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AEEB418215FA1770049288B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A9CD2188951F1043FAD8FED3 /* Pods_ShudderDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShudderDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C23CEECA06AB34E7EA2225 /* Pods-ShudderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemo/Pods-ShudderDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				9A64C188215B7A070018F61B /* ThreadHelper.swift */,
+				9AEEB418215FA1770049288B /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE64C12215ABFE70005837D /* FeaturedViewController.swift in Sources */,
+				9AEEB419215FA1770049288B /* Constants.swift in Sources */,
 				9A64C195215D08D10018F61B /* HeroCell.swift in Sources */,
 				9A64C18E215BFC510018F61B /* SectionHeaderView.swift in Sources */,
 				9A8007C9215E68F5004369EF /* UIImageView+Extensions.swift in Sources */,

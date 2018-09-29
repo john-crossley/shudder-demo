@@ -8,10 +8,6 @@
 
 import Foundation
 
-fileprivate struct Constants {
-    static let apiKey = "af0a9941948b6858b22ba3d7cb85bbad"
-}
-
 class FlickrRequestService: ImageRequestService {
 
     private var task: URLSessionDataTask?
@@ -31,7 +27,7 @@ class FlickrRequestService: ImageRequestService {
             return
         }
 
-        let baseUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(Constants.apiKey)&text=\(encodedQuery)&per_page=\(section.limit)&format=json&nojsoncallback=1"
+        let baseUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(Constants.Flickr.apiKey)&text=\(encodedQuery)&per_page=\(section.limit)&format=json&nojsoncallback=1"
 
         guard let url = URL(string: baseUrl) else {
             print("Invalid URL \(baseUrl)")

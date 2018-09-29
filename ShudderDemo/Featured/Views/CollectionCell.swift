@@ -9,11 +9,6 @@
 import UIKit
 import SnapKit
 
-fileprivate struct Constants {
-    static let fullyVisibleItemCount = 3
-    static let spacing = 8
-}
-
 fileprivate extension String {
     static let movieItemCellId: String = "movieItemCellId"
 }
@@ -26,10 +21,13 @@ class CollectionCell: UITableViewCell {
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 8
-        layout.minimumInteritemSpacing = 8
+        layout.minimumLineSpacing = Constants.spacing
+        layout.minimumInteritemSpacing = Constants.spacing
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        layout.sectionInset = UIEdgeInsets(top: 0,
+                                           left: Constants.spacing,
+                                           bottom: 0,
+                                           right: Constants.spacing)
 
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.register(MovieItemCell.self, forCellWithReuseIdentifier: .movieItemCellId)
@@ -94,7 +92,7 @@ extension CollectionCell: UICollectionViewDataSource {
 extension CollectionCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width = (Int(collectionView.bounds.width) / Constants.fullyVisibleItemCount) - Constants.fullyVisibleItemCount * Constants.spacing
+        let width = (Int(collectionView.bounds.width) / Constants.Collection.visibleCount) - Constants.Collection.visibleCount * Int(Constants.spacing)
 
         return CGSize(width: width, height: 150)
     }
