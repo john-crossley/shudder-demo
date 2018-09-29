@@ -23,6 +23,7 @@ struct Constants {
     }
 
     struct Flickr {
+        // This api key was temporary!
         static let apiKey = "af0a9941948b6858b22ba3d7cb85bbad"
     }
 }
