@@ -71,7 +71,7 @@ extension FeaturedViewController: UITableViewDataSource {
             return cell
         case .collection:
             let cell = tableView.dequeueReusableCell(withIdentifier: .collectionCellId, for: indexPath) as! CollectionCell
-//            cell.bind(section.items)
+            cell.bind(using: viewModel)
             return cell
         }
     }

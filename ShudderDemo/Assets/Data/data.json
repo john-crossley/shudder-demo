@@ -2,25 +2,25 @@
     {
         "type": "hero",
         "category": "",
-        "query": "Nintendo",
+        "query": "milky way",
         "limit": 4
     },
     {
         "type": "collection",
         "category": "Newly Added",
-        "query": "Top 100 Movies",
-        "limit": 8
+        "query": "new york",
+        "limit": 20
     },
     {
         "type": "collection",
         "category": "Curator's Choice",
-        "query": "Hellraiser",
-        "limit": 8
+        "query": "hawaii",
+        "limit": 20
     },
     {
         "type": "collection",
         "category": "Hammer's Hellions",
-        "query": "hammers hellions",
-        "limit": 8
+        "query": "italy",
+        "limit": 20
     }
 ]
