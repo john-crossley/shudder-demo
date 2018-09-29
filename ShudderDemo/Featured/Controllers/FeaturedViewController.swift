@@ -93,8 +93,8 @@ extension FeaturedViewController: UITableViewDataSource {
         let viewModel = sections[indexPath.section]
 
         switch viewModel.type {
-        case .hero: return 216
-        case .collection: return 150
+        case .hero: return Constants.Hero.height
+        case .collection: return Constants.Collection.height
         }
     }
 }
@@ -118,7 +118,7 @@ extension FeaturedViewController: UITableViewDelegate {
 
         switch viewModel.type {
         case .hero: return 0
-        case .collection: return 40
+        case .collection: return 36
         }
     }
 }

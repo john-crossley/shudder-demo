@@ -12,7 +12,14 @@ struct Constants {
     static let spacing: CGFloat = 8
 
     struct Collection {
+        static let height: CGFloat = 150
         static let visibleCount = 3
+    }
+
+    struct Hero {
+        static let height: CGFloat = {
+            return 200 + Constants.spacing * 2
+        }()
     }
 
     struct Flickr {
