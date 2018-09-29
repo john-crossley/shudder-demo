@@ -27,8 +27,8 @@
 		9A64C19B215D6C690018F61B /* FlickrRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C19A215D6C690018F61B /* FlickrRequestService.swift */; };
 		9A64C19F215D75ED0018F61B /* ImageRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C19E215D75ED0018F61B /* ImageRequestService.swift */; };
 		9A64C1A2215D760B0018F61B /* FlickrResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64C1A1215D760B0018F61B /* FlickrResponse.swift */; };
-		9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */; };
 		9A8007C9215E68F5004369EF /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8007C8215E68F5004369EF /* UIImageView+Extensions.swift */; };
+		9A8007CB215F8D5A004369EF /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A8007CA215F8D5A004369EF /* RobotoCondensed-Bold.ttf */; };
 		9AC061C6215E058F00B1D3C7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC061C5215E058F00B1D3C7 /* Photo.swift */; };
 		9AC061C8215E566900B1D3C7 /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC061C7215E566900B1D3C7 /* SectionViewModel.swift */; };
 		9AE64C10215ABFE70005837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE64C0F215ABFE70005837D /* AppDelegate.swift */; };
@@ -71,8 +71,8 @@
 		9A64C19A215D6C690018F61B /* FlickrRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRequestService.swift; sourceTree = "<group>"; };
 		9A64C19E215D75ED0018F61B /* ImageRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequestService.swift; sourceTree = "<group>"; };
 		9A64C1A1215D760B0018F61B /* FlickrResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResponse.swift; sourceTree = "<group>"; };
-		9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
 		9A8007C8215E68F5004369EF /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		9A8007CA215F8D5A004369EF /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		9AC061C5215E058F00B1D3C7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		9AC061C7215E566900B1D3C7 /* SectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
 		9AE64C0C215ABFE70005837D /* ShudderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShudderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,7 +232,7 @@
 		9A6815E8215AC2C900C7BA6E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9A6815E9215AC2D600C7BA6E /* Roboto-Condensed.ttf */,
+				9A8007CA215F8D5A004369EF /* RobotoCondensed-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -387,10 +387,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8007CB215F8D5A004369EF /* RobotoCondensed-Bold.ttf in Resources */,
 				9AE64C1A215ABFE80005837D /* LaunchScreen.storyboard in Resources */,
 				9AE64C17215ABFE80005837D /* Assets.xcassets in Resources */,
 				9A64C18C215BFB240018F61B /* SectionHeaderView.xib in Resources */,
-				9A6815EA215AC2D600C7BA6E /* Roboto-Condensed.ttf in Resources */,
 				9A64C178215B6A1E0018F61B /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

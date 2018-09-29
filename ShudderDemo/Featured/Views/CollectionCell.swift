@@ -96,7 +96,7 @@ extension CollectionCell: UICollectionViewDelegateFlowLayout {
 
         let width = (Int(collectionView.bounds.width) / Constants.fullyVisibleItemCount) - Constants.fullyVisibleItemCount * Constants.spacing
 
-        return CGSize(width: width, height: 160)
+        return CGSize(width: width, height: 150)
     }
 }
 

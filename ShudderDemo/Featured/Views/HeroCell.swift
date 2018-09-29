@@ -27,6 +27,7 @@ class HeroCell: UITableViewCell {
         view.delegate = self
         view.backgroundColor = .clear
         view.showsHorizontalScrollIndicator = false
+        view.isPagingEnabled = true
         return view
     }()
 
@@ -74,8 +75,9 @@ extension HeroCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let viewModel = photos[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieItemCellId", for: indexPath) as! MovieItemCell
-        cell.bind(photo: photos[indexPath.item])
+        cell.bind(photo: viewModel)
         return cell
     }
 }

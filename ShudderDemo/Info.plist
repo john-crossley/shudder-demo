@@ -6,7 +6,7 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Roboto-Condensed.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

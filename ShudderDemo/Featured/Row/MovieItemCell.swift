@@ -36,4 +36,9 @@ class MovieItemCell: UICollectionViewCell {
     func bind(photo: Photo) {
         movieImageView.setImage(photo.url)
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        movieImageView.image = nil
+    }
 }

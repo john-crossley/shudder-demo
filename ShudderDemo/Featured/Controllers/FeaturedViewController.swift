@@ -85,7 +85,13 @@ extension FeaturedViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 216 : 160
+
+        let viewModel = sections[indexPath.section]
+
+        switch viewModel.type {
+        case .hero: return 216
+        case .collection: return 150
+        }
     }
 }
 
@@ -104,7 +110,12 @@ extension FeaturedViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 0 : 40
+        let viewModel = sections[section]
+
+        switch viewModel.type {
+        case .hero: return 0
+        case .collection: return 40
+        }
     }
 }
 
