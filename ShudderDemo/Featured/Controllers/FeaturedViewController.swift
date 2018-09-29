@@ -33,7 +33,7 @@ class FeaturedViewController: UIViewController {
     }
 
     private lazy var tableView: UITableView = {
-        let view = UITableView(frame: .zero, style: .plain)
+        let view = UITableView(frame: .zero, style: .grouped)
         view.separatorStyle = .none
         view.dataSource = self
         view.delegate = self
@@ -53,10 +53,14 @@ class FeaturedViewController: UIViewController {
             make.edges.equalTo(view)
         }
 
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: nil, action: nil)
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: nil, action: nil)
+
         viewModel.delegate = self
         viewModel.fetch()
 
-        title = "Shudder Featured Demo"
+        title = "Featured"
     }
 }
 

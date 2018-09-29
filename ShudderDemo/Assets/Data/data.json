@@ -2,25 +2,43 @@
     {
         "type": "hero",
         "category": "",
-        "query": "winter",
+        "query": "Japan",
         "limit": 4
     },
     {
         "type": "collection",
         "category": "Newly Added",
-        "query": "new york",
+        "query": "New York",
         "limit": 20
     },
     {
         "type": "collection",
         "category": "Curator's Choice",
-        "query": "hawaii",
+        "query": "Hawaii",
         "limit": 20
     },
     {
         "type": "collection",
         "category": "Hammer's Hellions",
-        "query": "italy",
+        "query": "Italy",
+        "limit": 20
+    },
+    {
+        "type": "collection",
+        "category": "New Fest Arrivals",
+        "query": "Hong Kong",
+        "limit": 20
+    },
+    {
+        "type": "collection",
+        "category": "Slashics",
+        "query": "Bruges",
+        "limit": 20
+    },
+    {
+        "type": "collection",
+        "category": "Binge This",
+        "query": "Sweden",
         "limit": 20
     }
 ]

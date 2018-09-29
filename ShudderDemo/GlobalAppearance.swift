@@ -11,7 +11,9 @@ import UIKit
 class GlobalAppearance {
     init() {
         styleNavigationBar()
+        styleTabBar()
     }
+    
 
     private func styleNavigationBar() {
         let appearence = UINavigationBar.appearance()
@@ -21,5 +23,12 @@ class GlobalAppearance {
 
         appearence.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.Theme.accentColor]
         appearence.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.Theme.accentColor]
+    }
+
+    private func styleTabBar() {
+        let appearence = UITabBar.appearance()
+        appearence.isTranslucent = true
+        appearence.tintColor = UIColor.Theme.accentColor
+        appearence.barTintColor = UIColor.Theme.backgroundColor
     }
 }

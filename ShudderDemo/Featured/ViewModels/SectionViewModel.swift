@@ -48,6 +48,8 @@ class SectionViewModel {
     }
 
     func fetch() {
+        if case .loaded = self.state { return }
+
         self.state = .loading
         background { self.loadPhotosForSection() }
     }
