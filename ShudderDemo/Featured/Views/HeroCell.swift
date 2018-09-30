@@ -99,7 +99,8 @@ extension HeroCell: SectionViewModelDelegate {
         case .loaded(let photos):
             activityIndicatorView.stopAnimating()
             self.photos = photos
-        case .error: break
+        case .error:
+            activityIndicatorView.stopAnimating()
         }
     }
 }
