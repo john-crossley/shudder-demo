@@ -31,6 +31,8 @@ class SectionViewModel {
         }
     }
 
+    private var photos: [Photo] = []
+
     private let section: Section
     private let service: ImageRequestService
 
@@ -48,8 +50,10 @@ class SectionViewModel {
     }
 
     func fetch() {
-        if case .loaded = self.state { return }
-
+        if case .loaded = self.state {
+            self.state = .loaded(self.photos)
+            return
+        }
         self.state = .loading
         background { self.loadPhotosForSection() }
     }
@@ -58,6 +62,7 @@ class SectionViewModel {
         service.request(for: section) { result in
             switch result {
             case .success(let photos):
+                self.photos = photos
                 self.state = .loaded(photos)
             case .failure(let error):
                 print("Something went wrong: \(error.localizedDescription)")

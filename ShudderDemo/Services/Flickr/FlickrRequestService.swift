@@ -13,7 +13,7 @@ class FlickrRequestService: ImageRequestService {
     private var task: URLSessionDataTask?
 
     private func formatImageUrl(from photo: Flickr.Photo) -> Photo? {
-        let urlString = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_m.jpg"
+        let urlString = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_b.jpg"
         guard let url = URL(string: urlString) else { return nil }
         return Photo(url: url)
     }

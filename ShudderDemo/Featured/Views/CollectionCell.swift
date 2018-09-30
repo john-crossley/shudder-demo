@@ -13,7 +13,17 @@ fileprivate extension String {
     static let movieItemCellId: String = "movieItemCellId"
 }
 
-class CollectionCell: UITableViewCell {
+class CollectionCell: UITableViewCell, ContainsCollection {
+
+    var collectionViewOffset: CGFloat {
+        get {
+            return collectionView.contentOffset.x
+        }
+
+        set {
+            collectionView.contentOffset.x = newValue
+        }
+    }
 
     private var photos: [Photo] = [] {
         didSet { collectionView.reloadData() }

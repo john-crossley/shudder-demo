@@ -17,6 +17,7 @@ fileprivate extension String {
 
 class FeaturedViewController: UIViewController {
 
+    private var offets: [Int: CGFloat] = [:]
     private let viewModel: FeaturedViewModel
 
     private var sections: [SectionViewModel] = [] {
@@ -65,6 +66,18 @@ class FeaturedViewController: UIViewController {
 }
 
 extension FeaturedViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        (cell as? CollectionCell)?.collectionViewOffset = offets[indexPath.section] ?? 0
+
+    }
+
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let collectionCell = cell as? CollectionCell {
+            offets[indexPath.section] = collectionCell.collectionViewOffset
+        }
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let viewModel = sections[indexPath.section]
 

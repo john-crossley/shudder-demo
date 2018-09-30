@@ -39,6 +39,7 @@
 		9AEEB419215FA1770049288B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEB418215FA1770049288B /* Constants.swift */; };
 		9AEEB41B215FD1D00049288B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEB41A215FD1D00049288B /* TabBarController.swift */; };
 		9AEEB4202160E7640049288B /* FeaturedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEB41F2160E7640049288B /* FeaturedViewModelTests.swift */; };
+		9AEEB4232161687C0049288B /* ContainsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEB4222161687C0049288B /* ContainsCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		9AEEB418215FA1770049288B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9AEEB41A215FD1D00049288B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9AEEB41F2160E7640049288B /* FeaturedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewModelTests.swift; sourceTree = "<group>"; };
+		9AEEB4222161687C0049288B /* ContainsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainsCollection.swift; sourceTree = "<group>"; };
 		A9CD2188951F1043FAD8FED3 /* Pods_ShudderDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShudderDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C23CEECA06AB34E7EA2225 /* Pods-ShudderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShudderDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShudderDemo/Pods-ShudderDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 		9A64C16B215ACB610018F61B /* Featured */ = {
 			isa = PBXGroup;
 			children = (
+				9AEEB4212161686E0049288B /* Protocols */,
 				9A64C191215C00270018F61B /* Row */,
 				9A64C186215B74F30018F61B /* Controllers */,
 				9A64C185215B74EC0018F61B /* ViewModels */,
@@ -306,6 +309,14 @@
 				9AEEB41F2160E7640049288B /* FeaturedViewModelTests.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9AEEB4212161686E0049288B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9AEEB4222161687C0049288B /* ContainsCollection.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A83687674B19FF225CC23C2A /* Pods */ = {
@@ -501,6 +512,7 @@
 				9A64C18E215BFC510018F61B /* SectionHeaderView.swift in Sources */,
 				9A8007C9215E68F5004369EF /* UIImageView+Extensions.swift in Sources */,
 				9AEEB41B215FD1D00049288B /* TabBarController.swift in Sources */,
+				9AEEB4232161687C0049288B /* ContainsCollection.swift in Sources */,
 				9AC061C6215E058F00B1D3C7 /* Photo.swift in Sources */,
 				9A64C175215B69710018F61B /* UINavigationController+Extensions.swift in Sources */,
 				9A64C173215B63390018F61B /* UIColor+Extensions.swift in Sources */,

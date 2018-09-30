@@ -9,7 +9,17 @@
 import UIKit
 import SnapKit
 
-class HeroCell: UITableViewCell {
+class HeroCell: UITableViewCell, ContainsCollection {
+
+    var collectionViewOffset: CGFloat {
+        get {
+            return collectionView.contentOffset.x
+        }
+
+        set {
+            collectionView.contentOffset.x = newValue
+        }
+    }
 
     private var photos: [Photo] = [] {
         didSet { collectionView.reloadData() }
