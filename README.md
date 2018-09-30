@@ -16,4 +16,4 @@ xcodebuild \
 ```
 
 ## Flickr API
-To successfully demo this app you will need to enter your own Flickr API token which can be obtained from (https://www.flickr.com/services/api/)[https://www.flickr.com/services/api/] the one hardcoded into the app has been removed and is no longer valid.
+To successfully demo this app you will need to enter your own Flickr API token which can be obtained from [https://www.flickr.com/services/api/](https://www.flickr.com/services/api/) the one hardcoded into the app has been removed and is no longer valid.
